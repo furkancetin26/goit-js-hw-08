@@ -69,7 +69,7 @@ let html = '';
 // Galeri elemanlarını ekleme
 images.forEach(({ preview, original, description }) => {
   html += `<li class="gallery-item">
-    <a class="gallery-link" href="${preview}">
+    <a class="gallery-link" href="${original}">
       <img
         class="gallery-image"
         src="${preview}"
