@@ -65,11 +65,11 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-
+let html = '';
 // Galeri elemanlarını ekleme
 images.forEach(({ preview, original, description }) => {
-  gallery.innerHTML += `<li class="gallery-item">
-    <a class="gallery-link" href="large-image.jpg">
+  html += `<li class="gallery-item">
+    <a class="gallery-link" href="${preview}">
       <img
         class="gallery-image"
         src="${preview}"
@@ -79,7 +79,7 @@ images.forEach(({ preview, original, description }) => {
     </a>
   </li>`;
 });
-
+gallery.innerHTML = html;
 let lightboxInstance = null; // Lightbox instance'ını burada tanımlıyoruz.
 
 gallery.addEventListener('click', (event) => {
